@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>뽀송이 작동 모니터링</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f3f7fb;
+      color: #1f2937;
+    }
+
+    header {
+      background: #2563eb;
+      color: white;
+      padding: 24px;
+      text-align: center;
+    }
+
+    .container {
+      padding: 30px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .status {
+      background: white;
+      border-radius: 18px;
+      padding: 24px;
+      margin-bottom: 24px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .status h2 {
+      margin-top: 0;
+      color: #2563eb;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 18px;
+      padding: 22px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      font-size: 18px;
+      color: #374151;
+    }
+
+    .good {
+      color: #16a34a;
+      font-weight: bold;
+    }
+
+    .warning {
+      color: #f59e0b;
+      font-weight: bold;
+    }
+
+    .danger {
+      color: #dc2626;
+      font-weight: bold;
+    }
+
+    .log {
+      margin-top: 24px;
+      background: white;
+      border-radius: 18px;
+      padding: 22px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: 800px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>뽀송이 실시간 작동 모니터링</h1>
+    <p>AI 배설 케어 로봇 상태 확인 화면</p>
+  </header>
+
+  <div class="container">
+
+    <div class="status">
+      <h2>현재 상태</h2>
+      <p class="good">정상 작동 중</p>
+      <p>뽀송이가 대상자의 상태를 실시간으로 감지하고 있습니다.</p>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <h3>배터리 상태</h3>
+        <p class="good">82%</p>
+        <p>충전 상태 양호</p>
+      </div>
+
+      <div class="card">
+        <h3>패드 감지</h3>
+        <p class="good">정상</p>
+        <p>체중 및 압력 변화 감지 중</p>
+      </div>
+
+      <div class="card">
+        <h3>배설 감지</h3>
+        <p class="warning">소변 감지</p>
+        <p>간호사 확인이 필요합니다.</p>
+      </div>
+
+      <div class="card">
+        <h3>케어 단계</h3>
+        <p class="good">대기 중</p>
+        <p>필요 시 세척 및 건조 진행</p>
+      </div>
+
+      <div class="card">
+        <h3>EMR 연동</h3>
+        <p class="good">정상</p>
+        <p>기록 전송 가능</p>
+      </div>
+
+      <div class="card">
+        <h3>안전 알림</h3>
+        <p class="good">이상 없음</p>
+        <p>낙상 및 장시간 압박 없음</p>
+      </div>
+    </div>
+
+    <div class="log">
+      <h3>최근 알림 기록</h3>
+      <ul>
+        <li>14:10 패드 압력 정상 감지</li>
+        <li>14:05 대상자 움직임 감지</li>
+        <li>13:58 EMR 기록 전송 완료</li>
+        <li>13:40 배터리 상태 정상</li>
+      </ul>
+    </div>
+
+  </div>
+
+</body>
+</html>
